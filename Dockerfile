@@ -22,7 +22,6 @@ RUN useradd -u 1001 -r -g 0 -d ${HOME} -s /sbin/nologin \
 
 RUN pip3 install --upgrade pip
 RUN pip3 install ansible
+
 USER 1001
 
-RUN mkdir -p /etc/ansible
-RUN echo -e '[local]\nlocalhost ansible_connection=local' > /etc/ansible/hosts
